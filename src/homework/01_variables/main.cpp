@@ -12,16 +12,16 @@ using std::cin;  using std::cout;
 int main()
 {
 	
-	int num1;
+	int num;
 	cout<<"Enter a number: ";
-	cin>>num1;
+	cin>>num;
 
 	int result;
-	result = multiply_numbers(num1);
+	result = multiply_numbers(num);
 	cout<<"Result is: "<<result<<"\n";
 
-	int num2 = 4;
-	result = multiply_numbers(num2);
+	int num1 = 4;
+	result = multiply_numbers(num1);
 	cout<<"Result is: "<<result<<"\n";
 
 
