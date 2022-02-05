@@ -2,8 +2,10 @@
 #include "catch.hpp"
 #include "variables.h"
 
+
 TEST_CASE("Test multiply numbers") 
 {
+	
 	REQUIRE(multiply_numbers(10) == 50);
 	REQUIRE(multiply_numbers(2) == 10);
 
