@@ -3,22 +3,46 @@
 #include<iostream>
 #include "sequence.h"
 
-//write using statements for cin cout
+using std::cout; using std::cin; using std::string;
 
 
-/*
-Write code to create a vector of string names, add the values "John", "Mary", "Patty",
-"Sam" to the vector, call the function display_vector and pass the names vector as
-an argument, prompt user for a name to search for and a value to replace searched value with.
-Afterward, call the update_vector_element with the names vector and call the display_vector
-function.
-Don't worry about displaying a message for values that aren't found.  Assume user will
-give you a valid name.
-*/
-
-int main()
+int main() 
 {
+	
+	int choice;
+	string dna;
 
-	return 0;
+    do
+    {
+		cout << std::endl
+		<< " 1 - Get GC Content .\n"
+		<< " 2 - Get DNA Complement.\n"
+		<< " 3 - Exit.\n"
+		<< " Enter your choice and press return: ";
+		cin >> choice;	
+		
+		
+		switch (choice)
+		{
+			case 1:
+			cout<<"Enter DNA string: ";
+           	cin>>dna;
+			cout<<" GC Content :" <<get_gc_content(dna) <<std::endl;
+			break;
+			
+            case 2:
+			cout<<" Enter DNA string: ";
+			cin>>dna;
+            
+			cout<<" DNA Complement:  " <<get_dna_complement(dna) <<std::endl;
+			
+			break;
+			case 3:
+			cout<<" You have exited the program";
+			break;
+		}
+		
+        
+    }   
+	while (choice != 3);
 }
-
