@@ -24,6 +24,8 @@ int main()
 		game.mark_board(position);
 		game.display_board();
 	}
+	
+
 
 	cout<<"Continue type Y: ";
 	cin>>choice;
