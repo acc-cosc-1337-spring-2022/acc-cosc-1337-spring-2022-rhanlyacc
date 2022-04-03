@@ -14,8 +14,18 @@ int main()
 
 	cout<<"Enter first player (X or O)";
 	cin>>first_player;
-	game.start_game(first_player);
-
+	if (first_player == "X" or first_player == "O")
+		{
+			game.start_game(first_player);
+		}
+	else
+	{
+		{cout<< "Invalid input. Please enter X or O: ";
+		cin>>first_player;
+		game.start_game(first_player);
+		}
+	}
+	
 	int position;
 	while(game.game_over() == false)
 	{
@@ -25,8 +35,6 @@ int main()
 		game.display_board();
 	}
 	
-
-
 	cout<<"Continue type Y: ";
 	cin>>choice;
 
