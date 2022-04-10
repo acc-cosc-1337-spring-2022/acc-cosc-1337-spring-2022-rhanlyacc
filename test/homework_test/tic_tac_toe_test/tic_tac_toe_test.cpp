@@ -197,3 +197,67 @@ TEST_CASE("Test win diagonally from bottom left")
 
 	REQUIRE(game.game_over() == true );
 }
+
+TEST_CASE("Test tic tac toe game manager")
+{
+	TicTacToeManager game;
+	{
+	manager.save_game(board);
+	
+		board.start_game("O");
+		REQUIRE(board.game_over() == false);
+		board.mark_board(1);
+		REQUIRE(board.game_over() == false);
+		board.mark_board(4);
+		REQUIRE(board.game_over() == false);
+		board.mark_board(5);
+		REQUIRE(board.game_over() == false);
+		board.mark_board(3);
+		REQUIRE(board.game_over() == false);
+		board.mark_board(9);
+		REQUIRE(board.game_over() == true);
+		REQUIRE(board.get_winner() == "O");
+	
+	
+	manager.save_game(board);
+
+		board.start_game("X");
+
+		board.mark_board(1);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(2);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(4);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(3);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(7);
+		REQUIRE(board.game_over() == true);
+		REQUIRE(board.get_winner() == "X");
+	
+	manager.save_game(board);
+
+		board.start_game("X");
+
+		board.mark_board(1);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(2);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(3);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(4);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(5);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(6);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(7);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(8);
+		REQUIRE(board.game_over() == false);
+		board.mark_baord(9);
+		REQUIRE(board.game_over() == true);
+		REQUIRE(board.get_winner() == "X");
+	}
+		
+}

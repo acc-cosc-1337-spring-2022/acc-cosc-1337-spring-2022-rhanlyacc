@@ -123,13 +123,6 @@ void TicTacToe::mark_board(int position)
     set_next_player();
 }
 
-void TicTacToe::display_board()const
-{
-    for(int i=0; i < 9; i+=3)
-    {
-        cout<<pegs[i]<<"|"<<pegs[i+1]<<"|"<<pegs[i+2]<<"\n";
-    }
-}
 
 void TicTacToe::set_next_player()
 {

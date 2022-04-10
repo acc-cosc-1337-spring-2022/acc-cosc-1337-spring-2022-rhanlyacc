@@ -32,7 +32,7 @@ int main()
 		cout<<"Enter position [1-9]";
 		cin>>position;
 		game.mark_board(position);
-		game.display_board();
+		
 	}
 	
 	cout<<"Continue type Y: ";
